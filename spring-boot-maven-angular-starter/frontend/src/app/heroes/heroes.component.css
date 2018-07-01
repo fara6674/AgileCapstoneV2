@@ -31,18 +31,18 @@
 }
 
 .heroes a:hover {
-  color:#607D8B;
+  color:rgb(110, 152, 173);
 }
 
 .heroes .badge {
   display: inline-block;
-  font-size: medium;
-  color: white;
+  font-size: large;
+  color: rgb(44, 92, 114);
   padding: 0.8em 0.7em 0 0.7em;
   background-color: rgb(214, 226, 233);
   line-height: 1em;
   position: relative;
-  left: 18px;
+  left: 4px;
   top: 0px;
   height: 2em;
   min-width: 16px;
@@ -57,7 +57,8 @@ table,th,td
 {border:1px solid black;}
 
 td, th {
- 
+
+  font-size: 19px; 
   text-align: center;
 }
 th {

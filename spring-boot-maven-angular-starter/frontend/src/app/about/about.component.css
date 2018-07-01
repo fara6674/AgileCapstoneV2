@@ -1,5 +1,5 @@
 h2 {
-    font-size: 15rem;
+    font-size: 18px;
     line-height: 35.7px;
     font-weight: 300;
         font-size: 19px;
@@ -11,14 +11,15 @@ h2 {
     
     color: #2c7acb;
     font-family: interface,sans-serif;
+   font-size: 25px;
     
 }
 
 p {
-    font-size: 2.50rem;
+    
     line-height: 25.7px;
     font-weight: 150;
-        font-size: 13px;
+        font-size: 18px;
         
    
 }
