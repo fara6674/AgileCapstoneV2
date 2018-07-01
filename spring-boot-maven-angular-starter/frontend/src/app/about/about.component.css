@@ -1,0 +1,25 @@
+h2 {
+    font-size: 15rem;
+    line-height: 35.7px;
+    font-weight: 300;
+        font-size: 19px;
+        background-color:rgb(167, 205, 221);
+   
+}
+
+.h1, .h2, .h3, .h4, .heading-hfeed, .heading-secondary, .heading-secondary-alt, .post-med .entry-title, h1, h2, h3, h4, h5, h6 {
+    
+    color: #2c7acb;
+    font-family: interface,sans-serif;
+    
+}
+
+p {
+    font-size: 2.50rem;
+    line-height: 25.7px;
+    font-weight: 150;
+        font-size: 13px;
+        
+   
+}
+

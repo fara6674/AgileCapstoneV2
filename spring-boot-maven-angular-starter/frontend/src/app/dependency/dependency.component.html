@@ -1,0 +1,51 @@
+<p>
+        dependency works!
+      </p>
+      
+      <div class="container">
+        <h1>Add a Dependency</h1>
+        <form #dependencyForm="ngForm" (ngSubmit)="save(dependencyForm.value)">
+      
+          <div class="form-group">
+            <label for="description">Description</label>
+            <input type="text" class="form-control" id="description"
+                   required
+                   [(ngModel)]="model.description" name="description">
+          </div>
+      
+          <div class="form-group">
+            <label for="startDate">Start Date</label>
+            <input type="text"  class="form-control" id="startDate"
+                   [(ngModel)]="model.startDate" name="startDate">
+          </div>
+      
+          <div class="form-group">
+            <label for="endDate">End Date</label>
+            <input type="text"  class="form-control" id="endDate"
+                   [(ngModel)]="model.endDate" name="endDate">
+          </div>
+      
+          <div class="form-group">
+            <label for="duration">Duration in Hours</label>
+            <select class="form-control" id="duration" required>
+              <option *ngFor="let duration of durations" [value]="duration">{{ duration }}</option>
+            </select>
+          </div>
+      
+          <div class="form-group">
+            <label for="sprintNumber">Sprint Number</label>
+            <input type="text"  class="form-control" id="sprintNumber"
+                   [(ngModel)]="model.sprintNumber" name="sprintNumber">
+          </div>
+          <div class="form-group">
+            <label for="ticketNumber">Ticket Number</label>
+            <input type="text"  class="form-control" id="ticketNumber"
+                   [(ngModel)]="model.ticketNumber" name="ticketNumber">
+          </div>
+      
+          <button type="submit" class="btn btn-success">Save</button>
+      
+          {{ clickMessage }}
+      
+        </form>
+      </div>

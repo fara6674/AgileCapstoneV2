@@ -1,0 +1,68 @@
+/* HeroesComponent's private CSS styles */
+.heroes {
+  margin: 0 0 4em 0;
+  list-style-type: none;
+  padding: 0;
+  width: 10em;
+}
+.heroes td {
+  position: center;
+  cursor: pointer;
+  background-color: #EEE;
+  margin: .5em;
+  padding: 0em 0;
+  height: 1em;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.heroes td:hover {
+  color: #607D8B;
+  background-color: #DDD;
+  left: .1em;
+}
+
+.heroes a {
+  color: #888;
+  text-decoration: aliceblue;
+  position: center;
+  display: block;
+  width: 35px;
+}
+
+.heroes a:hover {
+  color:#607D8B;
+}
+
+.heroes .badge {
+  display: inline-block;
+  font-size: medium;
+  color: white;
+  padding: 0.8em 0.7em 0 0.7em;
+  background-color: rgb(214, 226, 233);
+  line-height: 1em;
+  position: relative;
+  left: 18px;
+  top: 0px;
+  height: 2em;
+  min-width: 16px;
+  text-align: center;
+  margin-right: .8em;
+  border-radius: 4px 0 0 4px;
+}
+
+thead {color:rgb(128, 211, 128);}
+tbody {color:rgb(69, 69, 163);}
+table,th,td
+{border:1px solid black;}
+
+td, th {
+ 
+  text-align: center;
+}
+th {
+  background: rgb(168, 208, 221);
+ 
+}
+
+

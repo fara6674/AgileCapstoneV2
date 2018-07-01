@@ -1,0 +1,88 @@
+a { cursor: pointer }
+        h1 {
+    color: rgb(7, 44, 82);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 250%;
+  }
+
+  .navigationbar {
+    overflow: hidden;
+    background-color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.navigationbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.droptest {
+    float: left;
+    overflow: hidden;
+}
+
+.droptest .dropbutton {
+    font-size: 16px;    
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+.navigationbar a:hover, .droptest:hover .dropbutton {
+    background-color: rgba(21, 6, 88, 0.233);
+}
+
+.droptest-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(77, 3, 3, 0.5);
+    z-index: 1;
+}
+
+.droptest-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.droptest-content a:hover {
+    background-color: rgba(51, 41, 90, 0.253);
+}
+
+.droptest:hover .droptest-content {
+    display: block;
+}
+
+div.c {
+text-align: center;
+}
+
+div.l {
+text-align: left;
+}
+
+div.r {
+text-align: right;
+}
+
+div.r {
+text-align: justify;
+}
+
+.navbar-nav
+{
+    flex-direction: inherit;
+}

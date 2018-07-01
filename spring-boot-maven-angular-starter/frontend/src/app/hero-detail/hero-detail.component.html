@@ -1,0 +1,45 @@
+<div *ngIf="hero">
+  <h2>{{ hero.description | uppercase }} Dependency Details</h2>
+  <div><span>id: </span>{{ hero.id }}</div>
+
+  <table>
+    <tr>
+    <td width="59%">
+  <div>
+    <label>description:  <span class ="heroes" > {{ hero.description }} </span></label>
+  </div>
+    </td>
+    </tr>
+    <tr>
+    <td>
+  <div>
+    <label>start Date: <input [(ngModel)]="hero.startDate" placeholder="Start Date"/>
+    </label>
+  </div>
+    </td>
+      <td>
+  <div>
+    <label>End Date: <input [(ngModel)]="hero.endDate" placeholder="End Date"/>
+    </label>
+  </div>
+    </td>
+    </tr>
+    <tr>
+    <td>
+  <div>
+    <label>End Date: <input [(ngModel)]="hero.duration" placeholder="duration"/>
+    </label>
+  </div>
+  <div>
+    <label>End Date: <input [(ngModel)]="hero.sprintNumber" placeholder="sprintNumber"/>
+    </label>
+  </div>
+  <div>
+    <label>End Date: <input [(ngModel)]="hero.ticketNumber" placeholder="Ticket Number"/>
+    </label>
+  </div>
+    </td>
+    </tr>
+  </table>
+  <button (click)="goBack()">go back</button>
+</div>

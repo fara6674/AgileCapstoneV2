@@ -1,0 +1,80 @@
+/* form.form-example {
+    display: table;
+}
+
+div.form-example {
+    display: table-row;
+} */
+
+/* label, input {
+    display: table-cell;
+    margin-bottom: 10px;
+} */
+
+label {
+    padding-right: 10px;
+}
+
+textarea {
+    padding: 10px;
+    line-height: 1.5;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 1px #999;
+}
+
+.textarea-example {
+    font-family: sans-serif;
+}
+
+.textarea-example div {
+    margin-bottom: 20px;
+}
+
+label,
+textarea {
+    display: block;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+/* label {
+    margin-bottom: 5px;
+} */
+
+/* @font-face {
+    font-family: 'Fira Sans';
+    src: local('FiraSans-Regular'),
+    url('/media/fonts/FiraSans-Regular.woff2') format('woff2');
+} */
+
+legend {
+    background-color: rgb(44, 40, 40);
+    color: #fff;
+    padding: 3px 6px;
+}
+
+.output {
+    font: 1rem 'Fira Sans', sans-serif;
+}
+
+input,
+select {
+    margin: .4rem;
+}
+
+/* label {
+    display: inline-block;
+    text-align: right;
+    width: 30%;
+} */
+
+.form-style{
+    max-width: 500px;
+    background: #FAFAFA;
+    padding: 30px;
+    margin: 50px auto;
+    box-shadow: 1px 1px 25px rgba(0, 0, 0, 0.35);
+    border-radius: 20px;
+    border: 6px solid #305A72;
+}

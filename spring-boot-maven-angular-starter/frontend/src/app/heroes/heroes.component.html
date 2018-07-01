@@ -1,0 +1,86 @@
+
+<!-- <div style="text-align:center">
+
+<img width="100%" height="300" alt="Angular Logo" src='/assets/img/Dependency-Board.png'>
+</div> -->
+
+<!-- <h2 align="center">Dependency Tracker</h2>
+<div class="widget-content nopadding"></div>
+<table border="1em" align="center">
+<tr>
+    <th>Id</th>
+    <th>Team</th>
+    <th>Start Date</th>
+    <th>End Date</th>
+    <th>Duration</th>
+    <th>Sprint Number</th>
+    <th>Ticket Number</th>
+  </tr>
+
+  <tr class="heroes" *ngFor="let hero of heroes">
+    <td><a routerLink="/detail/{{ hero.id }}"><span class="badge">{{ hero.id }}</span></a></td>
+    <td width="25%">{{ hero.description }}</td>
+    <td width="20%"><span>{{ hero.startDate }}</span></td>
+    <td width="20%"> <span>{{ hero.endDate }}</span></td>
+    <td><span>{{ hero.duration }} hr</span></td>
+    <td><span>{{ hero.sprintNumber }}</span></td>
+    <td><span>{{ hero.ticketNumber }}</span></td>
+  </tr>
+</table>
+ -->
+
+
+
+
+  
+      <!--  DataTables Card-->
+      <div class="card mb-3">
+        <div class="card-header">
+        <h1> <i class="fa fa-table" style="font-size:24px">&nbsp;</i>Dependency Tracker</h1></div>
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0" >
+              <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Team</th>
+                    <th>Start Date</th>
+                    <th>End Date</th>
+                    <th>Duration</th>
+                    <th>Sprint Number</th>
+                    <th>Ticket Number</th>
+                </tr>
+              </thead>
+              <tfoot>
+                <tr>
+                    <th>Id</th>
+                    <th>Team</th>
+                    <th>Start Date</th>
+                    <th>End Date</th>
+                    <th>Duration</th>
+                    <th>Sprint Number</th>
+                    <th>Ticket Number</th>
+                </tr>
+              </tfoot>
+              <tbody>
+                  <tr class="heroes"  *ngFor="let hero of heroes" >
+                      <td><a routerLink="/detail/{{ hero.id }}"><span class="badge" >{{ hero.id }}</span></a></td>
+                      <td width="25%">{{ hero.description }}</td>
+                      <td width="20%"><span>{{ hero.startDate }}</span></td>
+                      <td width="20%"> <span>{{ hero.endDate }}</span></td>
+                      <td><span>{{ hero.duration }} hr</span></td>
+                      <td><span>{{ hero.sprintNumber }}</span></td>
+                      <td><span>{{ hero.ticketNumber }}</span></td>
+                    </tr>
+              
+                        
+              </tbody>
+            </table>
+          </div>
+        </div>
+       
+    </div>
+   
+    
+   
+
