@@ -35,7 +35,7 @@ export class RegisterComponent implements OnInit {
 
       save(form: NgForm) {
         console.log("TEEESSSTTTTT");
-        this.registerService.save(form).subscribe((form: any) => {
+        this.registerService.save(form).subscribe(result => {
           console.log("after subscribe", form);
           this.gotoList();
           console.log("after got to List", form);
