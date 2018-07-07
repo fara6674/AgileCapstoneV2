@@ -1,24 +1,30 @@
 package com.capstone.app.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.servlet.ModelAndView;
 
 import com.capstone.app.api.User;
+import com.capstone.app.repositories.UserRepository;
 
 
 @RestController
 public class UserController {
 	
-	
+	 private UserRepository userRepository;
 
-/*	@RequestMapping(value="/register", method=RequestMethod.POST)
-	public ModelAndView registration(@ModelAttribute("user") User user) {
-		System.out.println("Info received:"+user);
-		userService.saveUser(user);
-		return new ModelAndView("login", "user1", new User());
-}*/
+	@Autowired
+	    UserController(UserRepository userRepository) {
+	        this.userRepository =userRepository;
+
+	    }
+
+
+	
+	 @PostMapping("/register") // <-- this method is working in 24 hour format not 12 hour format
+	    public User createUser(@RequestBody User input) { 
+	    return  userRepository.save(input);
+
+	    }
 }

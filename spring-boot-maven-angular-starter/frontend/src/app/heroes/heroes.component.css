@@ -18,7 +18,7 @@
 
 .heroes td:hover {
   color: #607D8B;
-  background-color: #DDD;
+  background-color: orange;
   left: .1em;
 }
 
@@ -42,7 +42,7 @@
   background-color: rgb(214, 226, 233);
   line-height: 1em;
   position: relative;
-  left: 4px;
+  left: 0px;
   top: 0px;
   height: 2em;
   min-width: 16px;

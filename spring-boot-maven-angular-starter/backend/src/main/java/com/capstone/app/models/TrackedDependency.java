@@ -20,61 +20,67 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 @Entity //(name="TRACKED_DEPENDENCY ")
 public class TrackedDependency {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private Long id;
 
-    @Size(max =50)
-    private String description;
-   
-    @Size(max = 50)
-    private String notes;
-    
-    private boolean status;
-    
-    
-    private String project;
-    
-    private String team;
-    
-  public TrackedDependency() {}
-  
-  
-  
+	@Size(max =50)
+	private String description;
 
-public TrackedDependency(@Size(max = 50) String description, @Size(max = 50) String notes, boolean status,
-		String project, String team, Date startDate, Date endDate, @NotNull int sprintNumber, long duration,
-		String ticketNumber) {
-	super();
-	this.description = description;
-	this.notes = notes;
-	this.status = status;
-	this.project = project;
-	this.team = team;
-	this.startDate = startDate;
-	this.endDate = endDate;
-	this.sprintNumber = sprintNumber;
-	this.duration = duration;
-	this.ticketNumber = ticketNumber;
-}
+	@Size(max = 50)
+	private String notes;
+
+	private String project;
+
+	private String team;
+
+	/*  @NotNull
+    private String startDate;
+	 */    
+	@JsonFormat(shape=JsonFormat.Shape.STRING, pattern="MM/dd/yyyy HH:mm")
+	private Date startDate;
+
+	@JsonFormat(shape=JsonFormat.Shape.STRING, pattern="MM/dd/yyyy HH:mm")
+	private Date endDate;
+
+
+	@NotNull
+	private int sprintNumber;
+
+	private long duration;
+
+
+	private String ticketNumber;
+
+	public TrackedDependency() {}
 
 
 
 
-public String getNotes() {
+	public TrackedDependency(@Size(max = 50) String description, @Size(max = 50) String notes,
+			String project, String team, Date startDate, Date endDate, @NotNull int sprintNumber, long duration,
+			String ticketNumber) {
+		super();
+		this.description = description;
+		this.notes = notes;
+		this.project = project;
+		this.team = team;
+		this.startDate = startDate;
+		this.endDate = endDate;
+		this.sprintNumber = sprintNumber;
+		this.duration = duration;
+		this.ticketNumber = ticketNumber;
+	}
+
+
+
+
+	public String getNotes() {
 		return notes;
 	}
 
 	public void setNotes(String notes) {
 		this.notes = notes;
-	}
-
-	public boolean isStatus() {
-		return status;
-	}
-
-	public void setStatus(boolean status) {
-		this.status = status;
 	}
 
 	public String getProject() {
@@ -93,25 +99,6 @@ public String getNotes() {
 		this.team = team;
 	}
 
-	/*  @NotNull
-    private String startDate;
-*/    
-    @JsonFormat(shape=JsonFormat.Shape.STRING, pattern="MM/dd/yyyy HH:mm")
-    private Date startDate;
-
-    @JsonFormat(shape=JsonFormat.Shape.STRING, pattern="MM/dd/yyyy HH:mm")
-    private Date endDate;
-
-
-    @NotNull
-    private int sprintNumber;
-
-    private long duration;
-    
-    
-    private String ticketNumber;
-
-  
 
 	public Date getStartDate() {
 		return startDate;
@@ -152,20 +139,20 @@ public String getNotes() {
 
 
 	public Long getId() {
-        return id;
-    }
+		return id;
+	}
 
-    public String getDescription() { return description; }
+	public String getDescription() { return description; }
 
 
 
-    public Date getEndDate() { return endDate; }
+	public Date getEndDate() { return endDate; }
 
-    public int getSprintNumber() { return sprintNumber; }
+	public int getSprintNumber() { return sprintNumber; }
 
-    public long getDuration() { return duration; }
+	public long getDuration() { return duration; }
 
-    public String getTicketNumber() { return ticketNumber; }
-    
-   
+	public String getTicketNumber() { return ticketNumber; }
+
+
 }

@@ -1,21 +1,23 @@
 import { Component, OnInit } from '@angular/core';
-import { Hero } from '../hero';
+//import { Dependency } from '../dependency';
 import { ActivatedRoute, Router } from '@angular/router';
 import { NgForm } from '@angular/forms';
 import {HeroService} from '../hero.service';
+
 
 @Component({
   selector: 'app-dependency',
   templateUrl: './dependency.component.html',
   styleUrls: ['./dependency.component.css']
 })
+
 export class DependencyComponent implements OnInit {
 
 
+  // model = new Hero('Test' ,  '01/01/2019' ,  '01/02/2019' ,  2 ,  123 , '1234');
 
 
-  model = new Hero('Test' ,  '01/01/2019' ,  '01/02/2019' ,  2 ,  123 , '1234');
-
+  
   submitted = false;
  
  
@@ -23,7 +25,8 @@ export class DependencyComponent implements OnInit {
   clicks = 1 ;
  
  onSubmit(form: NgForm) {
- 
+   
+  console.log(NgForm);
      this.submitted = true;
     /* const evtMsg = event ? ' Event target is ' + event.target.tagName  : '';
      this.clickMessage = (`Click #${this.clicks++}. ${evtMsg}`);*/
@@ -37,6 +40,7 @@ export class DependencyComponent implements OnInit {
     }, error => console.error(error))
   }
  
+  
  
     constructor(private route: ActivatedRoute,
       private router: Router,

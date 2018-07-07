@@ -21,7 +21,11 @@ public class User {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     
-    @NotNull
+    private String email;
+    
+    private String password;
+    
+   /* @NotNull
     @Size(max = 15)
     private String fname;
     
@@ -39,18 +43,18 @@ public class User {
 	@Size(min = 5)
     @PasswordSecurity
     @JsonDeserialize(using = Base64Password.class)
-    private String password;
+    private String password;*/
 
     public User() {
     }
 
-    public User(String username, String email, String password) {
-        this.username = username;
+    public User(String email, String password) {
+        //this.username = username;
         this.email = email;
         this.password = password;
     }
 
-    public String getFname() {
+/*    public String getFname() {
 		return fname;
 	}
 
@@ -72,7 +76,7 @@ public class User {
 
 	public void setUsername(String username) {
 		this.username = username;
-	}
+	}*/
 
 	public void setEmail(String email) {
 		this.email = email;
@@ -87,9 +91,9 @@ public class User {
         return id;
     }
 
-    public String getUsername() {
+    /*public String getUsername() {
         return username;
-    }
+    }*/
 
     public String getEmail() {
         return email;

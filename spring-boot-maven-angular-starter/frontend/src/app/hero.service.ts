@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable} from 'rxjs/observable';
 import { of } from 'rxjs/observable/of';
-import { Hero } from './hero';
+import { Dependency } from './dependency';
 import { HEROES } from './mock-heroes';
 import { MessageService } from './message.service';
 import { HttpClient } from '@angular/common/http';
@@ -19,7 +19,7 @@ export class HeroService {
 
   }
 
-  getHeroes(): Observable<Hero[]> {
+  getHeroes(): Observable<Dependency[]> {
     // TODO: send the message _after_ fetching the heroes
     this.messageService.add('HeroService: fetched heroes');
     return of(HEROES);
@@ -31,6 +31,8 @@ export class HeroService {
   
   
   save(hero: any): Observable<any> {
+
+    console.log("TEST TEST");
     let result: Observable<Object>;
     if (hero['href']) {
       result = this.http.put(hero.href, hero);

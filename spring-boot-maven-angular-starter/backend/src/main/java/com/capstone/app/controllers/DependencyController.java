@@ -61,18 +61,18 @@ public class DependencyController {
     @PostMapping("/dependency") // <-- this method is working in 24 hour format not 12 hour format
     public TrackedDependency createDependency(@RequestBody TrackedDependency input) { 
     	
-    	if(input.getEndDate() == null)
+/*    	if(input.getEndDate() == null)
     	{
     		
     		input.setEndDate(Date.from(Instant.now().minusSeconds(18000))); //added --> .minusSeconds(18000) to get the local US CST--> (UTC-CST)
     	}
-    	//long diffInMillies = Math.abs(input.getEndDate().getTime() - input.getStartDate().getTime());
-        //long diff = TimeUnit.HOURS.convert(diffInMillies, TimeUnit.MILLISECONDS);
+    	long diffInMillies = Math.abs(input.getEndDate().getTime() - input.getStartDate().getTime());
+        long diff = TimeUnit.HOURS.convert(diffInMillies, TimeUnit.MILLISECONDS);
          
-/*
+
          System.out.println("Difference in hours: "+diff);
-         input.setDuration(diff);*/
-        
+         input.setDuration(diff);
+        */
        return  dependencyRepository.save(input);
 
     }

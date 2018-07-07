@@ -3,7 +3,7 @@ label {
   display: inline-block;
   width: 100%;
   margin: .5em 0;
-  color: #607D8B;
+  color: rgb(4, 55, 80);
   font-weight: bold;
 }
 input {
@@ -14,14 +14,14 @@ input {
 button {
   margin-top: 20px;
   font-family: Arial;
-  background-color: #eee;
+  background-color: rgb(51, 119, 85);
   border: none;
   padding: 5px 10px;
   border-radius: 4px;
   cursor: pointer; cursor: hand;
 }
 button:hover {
-  background-color: #cfd8dc;
+  background-color: #6e260a;
 }
 button:disabled {
   background-color: #eee;
